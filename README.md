@@ -10,9 +10,23 @@ $ npm install --save cref-lookup
 ## Usage
 
 ```js
-const crefLookup = require('cref-lookup');
+const crefLookup = require('cref-lookup')
 
-crefLookup('Rainbow');
+crefLookup.query({
+    name: 'NAME',
+    state: 'SS'
+  })
+  .then(
+    res => {
+      console.log(res)
+    }
+  )
+  .catch(
+    err => {
+      console.error(err)
+    }
+  )
+
 ```
 ## License
 
